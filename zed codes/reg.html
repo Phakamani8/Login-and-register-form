@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registration Form</title>
+
+  <link rel="stylesheet" href="reg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+
+    <form class="form active" id="register">
+      <h1>NUE NUE</h1>
+      <label>Full Name:</label>
+      <input type="text">
+      <label>User Name:</label>
+      <input type="text">
+      <label>Email:</label>
+      <input type="email">
+      <label>Password:</label>
+      <input type="password">
+      <button type="button">Register</button>
+     <p>
+        Already have an account?
+        <a href="#" onclick="showForm('signin')">Sign in</a>
+      </p>
+    </form>
+
+
+    <form class="form" id="signin">
+      <h1>NUE NUE</h1>
+      <label>Email:</label>
+      <input type="email">
+      <label>Password:</label>
+      <input type="password">
+      <button type="button">Sign in</button>
+      <p>
+        Don't have an account?
+        <a href="#" onclick="showForm('register')">Register</a>
+      </p>
+   </form>
+ </div>
+ <script src="script.js"></script>
+
+</body>
+</html>
