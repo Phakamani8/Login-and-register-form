@@ -1,79 +1,54 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head>     \<meta charset="UTF-8">     \<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NUE NUE | Registration</title>
-
-<link rel="stylesheet" href="reg.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUE NUE | Registration</title>
+    <link rel="stylesheet" href="reg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
-
 <body>
+    <div class="container">
+        <!-- REGISTRATION FORM -->
+        <form class="form active" id="register">
+            <h1>NUE NUE</h1>
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
 
-<div class="container">
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
 
-    <!-- REGISTRATION FORM -->
+            <label for="register_email">Email:</label>
+            <input type="email" id="register_email" name="email" required>
 
-    <form class="form active" id="register">
+            <label for="register_password">Password:</label>
+            <input type="password" id="register_password" name="password" required minlength="8">
 
-        <h1>NUE NUE</h1>
+            <button type="submit">Register</button>
+            <p id="register_message"></p>
+            <p>
+                Already have an account?
+                <a href="#" onclick="showForm('signin'); return false;">Sign in</a>
+            </p>
+        </form>
 
-        <label for="full_name">Full Name:</label>
-        <input type="text" id="full_name" name="full_name" required>
+        <!-- SIGN-IN FORM -->
+        <form class="form" id="signin">
+            <h1>NUE NUE</h1>
+            <label for="login_email">Email:</label>
+            <input type="email" id="login_email" name="email" required>
 
-        <label for="username">User Name:</label>
-        <input type="text" id="username" name="username" required>
+            <label for="login_password">Password:</label>
+            <input type="password" id="login_password" name="password" required>
 
-        <label for="register_email">Email:</label>
-        <input type="email" id="register_email" name="email" required>
-
-        <label for="register_password">Password:</label>
-        <input type="password" id="register_password" name="password" required minlength="8">
-
-        <button type="submit">Register</button>
-
-        <p id="register_message"></p>
-
-        <p>
-            Already have an account?
-            <a href="#" onclick="showForm('signin'); return false;">
-                Sign in
-            </a>
-        </p>
-
-    </form>
-
-
-    <!-- SIGN-IN FORM -->
-
-    <form class="form" id="signin">
-
-        <h1>NUE NUE</h1>
-
-        <label for="login_email">Email:</label>
-        <input type="email" id="login_email" name="email" required>
-
-        <label for="login_password">Password:</label>
-        <input type="password" id="login_password" name="password" required>
-
-        <button type="submit">Sign in</button>
-
-        <p id="login_message"></p>
-
-        <p>
-            Don't have an account?
-            <a href="#" onclick="showForm('register'); return false;">
-                Register
-            </a>
-        </p>
-
-    </form>
-
-</div>
-
-<script src="script.js"></script>
-
-\</body> \</html>
+            <button type="submit">Sign in</button>
+            <p id="login_message"></p>
+            <p>
+                Don't have an account?
+                <a href="#" onclick="showForm('register'); return false;">Register</a>
+            </p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
